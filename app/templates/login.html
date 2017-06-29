@@ -13,7 +13,11 @@
     <link href="../static/css/pages/dashboard.css" rel="stylesheet">
 </head>
 <body>
-{% with  messages = get_flashed_messages()  %}
+<div class="alert alert-info">
+	<a href="#" class="close" data-dismiss="alert">
+		&times;
+	</a>
+<strong>{% with  messages = get_flashed_messages()  %}
 {% if messages %}
 
 <ul>
@@ -24,6 +28,8 @@
 
 {% endif %}
 {% endwith %}
+</strong>
+</div>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">

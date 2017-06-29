@@ -16,15 +16,12 @@
        <div class="widget-content">
            <div class="widget big-stats-container">
               <div class="widget-content">
-
-                  <form action="upload" method="post" enctype="multipart/form-data">
-                      <h6 class="bigstats">请选择文件（注意格式）：</h6>
-                      <input type="file" name="file"/><br/>
-                      <input type="submit" value="Upload">
-
-                  </form>
+                  <h6 class="bigstats">货币单位抓取</h6>
                   <div id="big_stats" class="cf">
-                      这里展示测试返回结果
+                      <form action="get_icon" method="post">
+                          <input type="text" name="test">
+                          <input type="submit" value="获取单位">
+                      </form>
                   </div>
               </div>
            </div>
