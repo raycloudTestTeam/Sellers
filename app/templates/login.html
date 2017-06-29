@@ -13,6 +13,17 @@
     <link href="../static/css/pages/dashboard.css" rel="stylesheet">
 </head>
 <body>
+{% with  messages = get_flashed_messages()  %}
+{% if messages %}
+
+<ul>
+{% for message in messages %}
+    <li>{{ message }}</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+{% endwith %}
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -49,27 +60,26 @@
 {% block page %}
 <div class="account-container">
 	<div class="content clearfix">
-		<form action="#" method="post">
+		<form action="" method="post" name="login">
 			<h1>用户登录</h1>
 			<div class="login-fields">
 				<p>Please provide your details</p>
 				<div class="field">
 					<label for="username">用户名:</label>
 					<input type="text" id="username" name="username" value="" placeholder="Username" class="login username-field" />
-				</div> <!-- /field -->
+				</div>
 				<div class="field">
 					<label for="password">密码:</label>
 					<input type="password" id="password" name="password" value="" placeholder="Password" class="login password-field"/>
-				</div> <!-- /password -->
-			</div> <!-- /login-fields -->
+				</div>
+			</div>
 			<div class="login-actions">
 				<!--<span class="login-checkbox">
 					<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
 					<label class="choice" for="Field">Keep me signed in</label>
 				</span>-->
 				<button class="button btn btn-success btn-large">登录</button>
-			</div> <!-- .actions -->
-
+			</div>
 
 
 		</form>
@@ -78,10 +88,11 @@
 
 </div> <!-- /account-container -->
 {% endblock %}
+<script src="../static/js/excanvas.min.js"></script>
 <script src="../static/js/jquery-2.1.1.min.js"></script>
 <script src="../static/js/bootstrap.js"></script>
 <script src="../static/js/signin.js"></script>
-<script src="../static/js/excanvas.min.js"></script>
+
 <script src="../static/js/chart.min.js" type="text/javascript"></script>
 <script src="../static/js/base.js"></script>
 </body>

@@ -7,5 +7,29 @@
 {% endblock %}
 
 {% block main %}
-  test11
+   <div class="span6">
+   <div class="widget widget-nopad">
+       <div class="widget-header">
+           <i class="icon-list-alt"></i>
+           <h3> 接口文件上传自动化测试</h3>
+       </div>
+       <div class="widget-content">
+           <div class="widget big-stats-container">
+              <div class="widget-content">
+
+                  <form action="upload" method="post" enctype="multipart/form-data">
+                      <h6 class="bigstats">请选择文件（注意格式）：</h6>
+                      <input type="file" name="file"/><br/>
+                      <input type="submit" value="Upload">
+
+                  </form>
+                  <div id="big_stats" class="cf">
+                      这里展示测试返回结果
+                  </div>
+              </div>
+           </div>
+       </div>
+
+   </div>
+   </div>
 {% endblock %}
